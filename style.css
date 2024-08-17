@@ -1,0 +1,242 @@
+body {
+    font-family: 'Gothic', Arial, sans-serif;
+    color: #c0c0c0;
+    margin: 0;
+    padding: 20px;
+    background-image: url('../background.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-width: 800px;
+    min-height: 600px;
+}
+
+.character-sheet {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(42, 42, 42, 0.9); /* Semi-transparent background */
+    border: 2px solid #4a4a4a;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h1, h2, h3 {
+    color: #bd1616;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 20px;
+    width: 100%;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+.top-section, .grid-section, .bottom-section {
+    display: grid;
+    gap: 10px;
+}
+
+.top-section, .grid-section {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.bottom-section {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 20px;
+}
+
+.field, .attribute-row, .ability-row, .advantage-row, .trait-row, .health-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3px;
+}
+
+input[type="text"], textarea, input[type="number"] {
+    background-color: #3a3a3a;
+    color: #c0c0c0;
+    border: 1px solid #4a4a4a;
+    padding: 3px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.dots {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #807e7e;
+    border-radius: 50%;
+    margin-right: 2px;
+    cursor: pointer;
+}
+
+.dot.filled {
+    background-color: #8b0000;
+}
+
+.attribute-name, .ability-name, .advantage-name, .trait-name, .health-label {
+    flex: 1;
+    margin-right: 5px;
+}
+
+.attribute-name input, .ability-name input, .advantage-name input, .trait-name {
+    border: none;
+    border-bottom: 1px solid #4a4a4a;
+    background: transparent;
+}
+
+.attribute-name input {
+    font-weight: bold;
+}
+
+.attributes-section, .abilities-section, .advantages-section, .other-traits-section {
+    margin-bottom: 15px;
+}
+
+.humanity-path, .willpower, .bloodpool {
+    margin-bottom: 20px;
+}
+
+.humanity-path input[type="text"], .willpower-total, .willpower-current, .bloodpool-boxes {
+    margin-bottom: 10px;
+}
+
+.bloodpool-boxes.dots {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 160px; /* Adjust if needed */
+}
+
+.bloodpool-boxes.dots .dot {
+    width: 12px;
+    height: 12px;
+    margin: 2px;
+    flex: 0 0 auto;
+}
+
+/* Force wrap after 10th dot */
+.bloodpool-boxes.dots .dot:nth-child(10) {
+    margin-right: auto;
+}
+
+/* Ensure consistent width for both rows */
+.bloodpool-boxes.dots::after {
+    content: "";
+    flex: auto;
+}
+
+.willpower-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.willpower-label {
+    width: 60px; /* Adjust this value as needed */
+    margin-right: 10px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.willpower .dots {
+    flex-grow: 1;
+}
+
+
+
+.points-per-turn {
+    display: flex;
+    align-items: center;
+    background-color: #2a2a2a;
+    padding: 3px 5px;
+    border: 1px solid #4a4a4a;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.points-per-turn label {
+    flex: 1;
+    margin-right: 5px;
+}
+
+.points-per-turn input[type="number"] {
+    width: 30px;
+    padding: 2px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.health-section, .weakness-section, .experience-section {
+    background-color: #2a2a2a;
+    padding: 10px;
+    border: 1px solid #4a4a4a;
+}
+
+.health-section {
+    flex-grow: 1;
+}
+
+.weakness-section, .experience-section {
+    flex-shrink: 0;
+}
+
+/* Remove spinner buttons from number inputs */
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .top-section, .grid-section, .bottom-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+.import-export-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.import-export-buttons button {
+    background-color: #bd1616;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.import-export-buttons button:hover {
+    background-color: #8b0000;
+}

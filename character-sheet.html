@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vampire: The Masquerade Character Sheet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="character-sheet">
+        <h1>Vampire: The Masquerade Character Sheet</h1>
+
+        <div class="top-section">
+            <div class="field">
+                <label for="name">Name:</label>
+                <input type="text" id="name">
+            </div>
+            <div class="field">
+                <label for="nature">Nature:</label>
+                <input type="text" id="nature">
+            </div>
+            <div class="field">
+                <label for="clan">Clan:</label>
+                <input type="text" id="clan">
+            </div>
+            <div class="field">
+                <label for="player">Player:</label>
+                <input type="text" id="player">
+            </div>
+            <div class="field">
+                <label for="demeanor">Demeanor:</label>
+                <input type="text" id="demeanor">
+            </div>
+            <div class="field">
+                <label for="generation">Generation:</label>
+                <input type="text" id="generation">
+            </div>
+            <div class="field">
+                <label for="chronicle">Chronicle:</label>
+                <input type="text" id="chronicle">
+            </div>
+            <div class="field">
+                <label for="concept">Concept:</label>
+                <input type="text" id="concept">
+            </div>
+            <div class="field">
+                <label for="sire">Sire:</label>
+                <input type="text" id="sire">
+            </div>
+        </div>
+
+        <h2>Attributes</h2>
+        <div class="attributes-section grid-section">
+            <div class="attribute-category">
+              <h3>Physical</h3>
+              
+              <div id="strength" class="attribute-row">
+                <div class="attribute-name">
+                  <input type="text" value="Strength" readonly>
+                </div>
+                <div class="dots" data-ability="strength" data-max="5" data-value="0" data-value="0">
+                </div>
+              </div>
+          
+              <div id="dexterity" class="attribute-row">
+                <div class="attribute-name">
+                  <input type="text" value="Dexterity" readonly>
+                </div>
+                <div class="dots" data-ability="dexterity" data-max="5" data-value="0" data-value="0">
+                </div>
+              </div>
+          
+              <div id="stamina" class="attribute-row">
+                <div class="attribute-name">
+                  <input type="text" value="Stamina" readonly>
+                </div>
+                <div class="dots" data-ability="stamina" data-max="5" data-value="0" data-value="0">
+                </div>
+              </div>
+            </div>
+          
+            <div class="attribute-category">
+              <h3>Social</h3>
+              
+              <div id="charisma" class="attribute-row">
+                <div class="attribute-name">
+                  <input type="text" value="Charisma" readonly>
+                </div>
+                <div class="dots" data-ability="charisma" data-max="5" data-value="0" data-value="0">
+                </div>
+              </div>
+          
+              <div id="manipulation" class="attribute-row">
+                <div class="attribute-name">
+                  <input type="text" value="Manipulation" readonly>
+                </div>
+                <div class="dots" data-ability="manipulation" data-max="5" data-value="0" data-value="0">
+                </div>
+              </div>
+          
+              <div id="appearance" class="attribute-row">
+                <div class="attribute-name">
+                  <input type="text" value="Appearance" readonly>
+                </div>
+                <div class="dots" data-ability="appearance" data-max="5" data-value="0" data-value="0">
+                </div>
+              </div>
+            </div>
+          
+            <div class="attribute-category">
+              <h3>Mental</h3>
+              
+              <div id="perception" class="attribute-row">
+                <div class="attribute-name">
+                  <input type="text" value="Perception" readonly>
+                </div>
+                <div class="dots" data-ability="perception" data-max="5" data-value="0" data-value="0">
+                </div>
+              </div>
+          
+              <div id="intelligence" class="attribute-row">
+                <div class="attribute-name">
+                  <input type="text" value="Intelligence" readonly>
+                </div>
+                <div class="dots" data-ability="intelligence" data-max="5" data-value="0" data-value="0">
+                </div>
+              </div>
+          
+              <div id="wits" class="attribute-row">
+                <div class="attribute-name">
+                  <input type="text" value="Wits" readonly>
+                </div>
+                <div class="dots" data-ability="wits" data-max="5" data-value="0" data-value="0">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <h2>Abilities</h2>
+        <div class="abilities-section grid-section">
+            <div class="ability-category">
+                <h3>Talents</h3>
+                <div class="ability-row" id="alertness">
+                    <div class="ability-name">
+                        <input type="text" id="alertness-name" name="alertness-name" value="Alertness" readonly>
+                    </div>
+                    <div class="dots" data-ability="alertness" data-max="5" data-value="0" data-value="0">
+                    </div>
+                </div>
+                <div class="ability-row" id="athletics">
+                    <div class="ability-name">
+                        <input type="text" id="athletics-name" name="athletics-name" value="Athletics" readonly>
+                    </div>
+                    <div class="dots" data-ability="athletics" data-max="5" data-value="0" data-value="0">
+                    </div>
+                </div>
+                <div class="ability-row" id="brawl">
+                    <div class="ability-name">
+                        <input type="text" id="brawl-name" name="brawl-name" value="Brawl" readonly>
+                    </div>
+                    <div class="dots" data-ability="brawl" data-max="5" data-value="0" data-value="0">
+                    </div>
+                </div>
+                <div class="ability-row" id="dodge">
+                    <div class="ability-name">
+                        <input type="text" id="dodge-name" name="dodge-name" value="Dodge" readonly>
+                    </div>
+                    <div class="dots" data-ability="dodge" data-max="5" data-value="0" data-value="0">
+                    </div>
+                </div>
+                <div class="ability-row" id="empathy">
+                    <div class="ability-name">
+                        <input type="text" id="empathy-name" name="empathy-name" value="Empathy" readonly>
+                    </div>
+                    <div class="dots" data-ability="empathy" data-max="5" data-value="0" data-value="0">
+                    </div>
+                </div>
+                <div class="ability-row" id="expression">
+                    <div class="ability-name">
+                        <input type="text" id="expression-name" name="expression-name" value="Expression" readonly>
+                    </div>
+                    <div class="dots" data-ability="expression" data-max="5" data-value="0" data-value="0">
+                    </div>
+                </div>
+                <div class="ability-row" id="intimidation">
+                    <div class="ability-name">
+                        <input type="text" id="intimidation-name" name="intimidation-name" value="Intimidation" readonly>
+                    </div>
+                    <div class="dots" data-ability="intimidation" data-max="5" data-value="0" data-value="0">
+                    </div>
+                </div>
+                <div class="ability-row" id="leadership">
+                    <div class="ability-name">
+                        <input type="text" id="leadership-name" name="leadership-name" value="Leadership" readonly>
+                    </div>
+                    <div class="dots" data-ability="leadership" data-max="5" data-value="0" data-value="0">
+                    </div>
+                </div>
+                <div class="ability-row" id="streetwise">
+                    <div class="ability-name">
+                        <input type="text" id="streetwise-name" name="streetwise-name" value="Streetwise" readonly>
+                    </div>
+                    <div class="dots" data-ability="streetwise" data-max="5" data-value="0" data-value="0">
+                    </div>
+                </div>
+                <div class="ability-row" id="subterfuge">
+                    <div class="ability-name">
+                        <input type="text" id="subterfuge-name" name="subterfuge-name" value="Subterfuge" readonly>
+                    </div>
+                    <div class="dots" data-ability="subterfuge" data-max="5" data-value="0" data-value="0">
+                    </div>
+                </div>
+                <div class="ability-row" id="custom-talent">
+                    <div class="ability-name">
+                        <input type="text" id="custom-talent-name" name="custom-talent-name" placeholder="Custom Talent">
+                    </div>
+                    <div class="dots" data-ability="custom-talent" data-max="5" data-value="0" data-value="0">
+                    </div>
+                </div>
+            </div>
+            <div class="ability-category">
+                <h3>Skills</h3>
+                <div class="ability-row" id="animal-ken">
+                    <div class="ability-name">
+                        <input type="text" id="animal-ken-name" name="animal-ken-name" value="Animal Ken" readonly>
+                    </div>
+                    <div class="dots" data-ability="animal-ken" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="ability-row" id="crafts">
+                    <div class="ability-name">
+                        <input type="text" id="crafts-name" name="crafts-name" value="Crafts" readonly>
+                    </div>
+                    <div class="dots" data-ability="crafts" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="ability-row" id="drive">
+                    <div class="ability-name">
+                        <input type="text" id="drive-name" name="drive-name" value="Drive" readonly>
+                    </div>
+                    <div class="dots" data-ability="drive" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="ability-row" id="etiquette">
+                    <div class="ability-name">
+                        <input type="text" id="etiquette-name" name="etiquette-name" value="Etiquette" readonly>
+                    </div>
+                    <div class="dots" data-ability="etiquette" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="ability-row" id="firearms">
+                    <div class="ability-name">
+                        <input type="text" id="firearms-name" name="firearms-name" value="Firearms" readonly>
+                    </div>
+                    <div class="dots" data-ability="firearms" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="ability-row" id="melee">
+                    <div class="ability-name">
+                        <input type="text" id="melee-name" name="melee-name" value="Melee" readonly>
+                    </div>
+                    <div class="dots" data-ability="melee" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="ability-row" id="performance">
+                    <div class="ability-name">
+                        <input type="text" id="performance-name" name="performance-name" value="Performance" readonly>
+                    </div>
+                    <div class="dots" data-ability="performance" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="ability-row" id="security">
+                    <div class="ability-name">
+                        <input type="text" id="security-name" name="security-name" value="Security" readonly>
+                    </div>
+                    <div class="dots" data-ability="security" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="ability-row" id="stealth">
+                    <div class="ability-name">
+                        <input type="text" id="stealth-name" name="stealth-name" value="Stealth" readonly>
+                    </div>
+                    <div class="dots" data-ability="stealth" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="ability-row" id="survival">
+                    <div class="ability-name">
+                        <input type="text" id="survival-name" name="survival-name" value="Survival" readonly>
+                    </div>
+                    <div class="dots" data-ability="survival" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <!-- Custom skill field -->
+                <div class="ability-row" id="custom-skill">
+                    <div class="ability-name">
+                        <input type="text" id="custom-skill-name" name="custom-skill-name" placeholder="Custom Skill">
+                    </div>
+                    <div class="dots" data-ability="custom-skill" data-max="5" data-value="0">
+                    </div>
+                </div>
+            </div>
+            <div class="ability-category">
+                <h3>Knowledges</h3>
+                <div class="ability-row" id="academics">
+                    <div class="ability-name">
+                        <input type="text" id="academics-name" name="academics-name" value="Academics" readonly>
+                    </div>
+                    <div class="dots" data-ability="academics" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="ability-row" id="computer">
+                    <div class="ability-name">
+                        <input type="text" id="computer-name" name="computer-name" value="Computer" readonly>
+                    </div>
+                    <div class="dots" data-ability="computer" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="ability-row" id="finance">
+                    <div class="ability-name">
+                        <input type="text" id="finance-name" name="finance-name" value="Finance" readonly>
+                    </div>
+                    <div class="dots" data-ability="finance" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="ability-row" id="investigation">
+                    <div class="ability-name">
+                        <input type="text" id="investigation-name" name="investigation-name" value="Investigation" readonly>
+                    </div>
+                    <div class="dots" data-ability="investigation" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="ability-row" id="law">
+                    <div class="ability-name">
+                        <input type="text" id="law-name" name="law-name" value="Law" readonly>
+                    </div>
+                    <div class="dots" data-ability="law" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="ability-row" id="linguistics">
+                    <div class="ability-name">
+                        <input type="text" id="linguistics-name" name="linguistics-name" value="Linguistics" readonly>
+                    </div>
+                    <div class="dots" data-ability="linguistics" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="ability-row" id="medicine">
+                    <div class="ability-name">
+                        <input type="text" id="medicine-name" name="medicine-name" value="Medicine" readonly>
+                    </div>
+                    <div class="dots" data-ability="medicine" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="ability-row" id="occult">
+                    <div class="ability-name">
+                        <input type="text" id="occult-name" name="occult-name" value="Occult" readonly>
+                    </div>
+                    <div class="dots" data-ability="occult" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="ability-row" id="politics">
+                    <div class="ability-name">
+                        <input type="text" id="politics-name" name="politics-name" value="Politics" readonly>
+                    </div>
+                    <div class="dots" data-ability="politics" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="ability-row" id="science">
+                    <div class="ability-name">
+                        <input type="text" id="science-name" name="science-name" value="Science" readonly>
+                    </div>
+                    <div class="dots" data-ability="science" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <!-- Custom knowledge field -->
+                <div class="ability-row" id="custom-knowledge">
+                    <div class="ability-name">
+                        <input type="text" id="custom-knowledge-name" name="custom-knowledge-name" placeholder="Custom Knowledge">
+                    </div>
+                    <div class="dots" data-ability="custom-knowledge" data-max="5" data-value="0">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2>Advantages</h2>
+        <div class="advantages-section grid-section">
+            <div class="advantage-category">
+                <h3>Disciplines</h3>
+                <div class="advantage-row" id="discipline-1">
+                    <div class="advantage-name">
+                        <input type="text" id="discipline-1-name" name="discipline-1-name" placeholder="">
+                    </div>
+                    <div class="dots" data-ability="discipline-1" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="advantage-row" id="discipline-2">
+                    <div class="advantage-name">
+                        <input type="text" id="discipline-2-name" name="discipline-2-name" placeholder="">
+                    </div>
+                    <div class="dots" data-ability="discipline-2" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="advantage-row" id="discipline-3">
+                    <div class="advantage-name">
+                        <input type="text" id="discipline-3-name" name="discipline-3-name" placeholder="">
+                    </div>
+                    <div class="dots" data-ability="discipline-3" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="advantage-row" id="discipline-4">
+                    <div class="advantage-name">
+                        <input type="text" id="discipline-4-name" name="discipline-4-name" placeholder="">
+                    </div>
+                    <div class="dots" data-ability="discipline-4" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="advantage-row" id="discipline-5">
+                    <div class="advantage-name">
+                        <input type="text" id="discipline-5-name" name="discipline-5-name" placeholder="">
+                    </div>
+                    <div class="dots" data-ability="discipline-5" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="advantage-row" id="discipline-6">
+                    <div class="advantage-name">
+                        <input type="text" id="discipline-6-name" name="discipline-6-name" placeholder="">
+                    </div>
+                    <div class="dots" data-ability="discipline-6" data-max="5" data-value="0">
+                    </div>
+                </div> 
+            </div>
+            <div class="advantage-category">
+                <h3>Backgrounds</h3>
+                <div class="advantage-row" id="background-1">
+                    <div class="advantage-name">
+                        <input type="text" id="background-1-name" name="background-1-name" placeholder="">
+                    </div>
+                    <div class="dots" data-ability="background-1" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="advantage-row" id="background-2">
+                    <div class="advantage-name">
+                        <input type="text" id="background-2-name" name="background-2-name" placeholder="">
+                    </div>
+                    <div class="dots" data-ability="background-2" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="advantage-row" id="background-3">
+                    <div class="advantage-name">
+                        <input type="text" id="background-3-name" name="background-3-name" placeholder="">
+                    </div>
+                    <div class="dots" data-ability="background-3" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="advantage-row" id="background-4">
+                    <div class="advantage-name">
+                        <input type="text" id="background-4-name" name="background-4-name" placeholder="">
+                    </div>
+                    <div class="dots" data-ability="background-4" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="advantage-row" id="background-5">
+                    <div class="advantage-name">
+                        <input type="text" id="background-5-name" name="background-5-name" placeholder="">
+                    </div>
+                    <div class="dots" data-ability="background-5" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="advantage-row" id="background-6">
+                    <div class="advantage-name">
+                        <input type="text" id="background-6-name" name="background-6-name" placeholder="">
+                    </div>
+                    <div class="dots" data-ability="background-6" data-max="5" data-value="0">
+                    </div>
+                </div>
+            </div>
+            <div class="advantage-category">
+                <h3>Virtues</h3>
+                <div class="advantage-row" id="conscience">
+                    <div class="advantage-name">
+                        <input type="text" id="conscience-name" name="conscience-name" value="Conscience/Conviction" readonly>
+                    </div>
+                    <div class="dots" data-ability="conscience" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="advantage-row" id="selfcontrol">
+                    <div class="advantage-name">
+                        <input type="text" id="selfcontrol-name" name="selfcontrol-name" value="Self-Control/Instinct" readonly>
+                    </div>
+                    <div class="dots" data-ability="selfcontrol" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="advantage-row" id="courage">
+                    <div class="advantage-name">
+                        <input type="text" id="courage-name" name="courage-name" value="Courage" readonly>
+                    </div>
+                    <div class="dots" data-ability="courage" data-max="5" data-value="0">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-section">
+            <div class="other-traits">
+                <h3>Other Traits</h3>
+                <div class="advantage-row" id="trait-1">
+                    <div class="advantage-name">
+                        <input type="text" id="trait-1-name" name="trait-1-name" placeholder="">
+                    </div>
+                    <div class="dots" data-ability="trait-1" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="advantage-row" id="trait-2">
+                    <div class="advantage-name">
+                        <input type="text" id="trait-2-name" name="trait-2-name" placeholder="">
+                    </div>
+                    <div class="dots" data-ability="trait-2" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="advantage-row" id="trait-3">
+                    <div class="advantage-name">
+                        <input type="text" id="trait-3-name" name="trait-3-name" placeholder="">
+                    </div>
+                    <div class="dots" data-ability="trait-3" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="advantage-row" id="trait-4">
+                    <div class="advantage-name">
+                        <input type="text" id="trait-4-name" name="trait-4-name" placeholder="">
+                    </div>
+                    <div class="dots" data-ability="trait-4" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="advantage-row" id="trait-5">
+                    <div class="advantage-name">
+                        <input type="text" id="trait-5-name" name="trait-5-name" placeholder="">
+                    </div>
+                    <div class="dots" data-ability="trait-5" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="advantage-row" id="trait-6">
+                    <div class="advantage-name">
+                        <input type="text" id="trait-6-name" name="trait-6-name" placeholder="">
+                    </div>
+                    <div class="dots" data-ability="trait-6" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="advantage-row" id="trait-7">
+                    <div class="advantage-name">
+                        <input type="text" id="trait-7-name" name="trait-7-name" placeholder="">
+                    </div>
+                    <div class="dots" data-ability="trait-7" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="advantage-row" id="trait-8">
+                    <div class="advantage-name">
+                        <input type="text" id="trait-8-name" name="trait-8-name" placeholder="">
+                    </div>
+                    <div class="dots" data-ability="trait-8" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="advantage-row" id="trait-9">
+                    <div class="advantage-name">
+                        <input type="text" id="trait-9-name" name="trait-9-name" placeholder="">
+                    </div>
+                    <div class="dots" data-ability="trait-9" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="advantage-row" id="trait-10">
+                    <div class="advantage-name">
+                        <input type="text" id="trait-10-name" name="trait-10-name" placeholder="">
+                    </div>
+                    <div class="dots" data-ability="trait-10" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="advantage-row" id="trait-11">
+                    <div class="advantage-name">
+                        <input type="text" id="trait-11-name" name="trait-11-name" placeholder="">
+                    </div>
+                    <div class="dots" data-ability="trait-11" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="advantage-row" id="trait-12">
+                    <div class="advantage-name">
+                        <input type="text" id="trait-12-name" name="trait-12-name" placeholder="">
+                    </div>
+                    <div class="dots" data-ability="trait-12" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="advantage-row" id="trait-13">
+                    <div class="advantage-name">
+                        <input type="text" id="trait-13-name" name="trait-13-name" placeholder="">
+                    </div>
+                    <div class="dots" data-ability="trait-13" data-max="5" data-value="0">
+                    </div>
+                </div>
+                <div class="advantage-row" id="trait-14">
+                    <div class="advantage-name">
+                        <input type="text" id="trait-14-name" name="trait-14-name" placeholder="">
+                    </div>
+                    <div class="dots" data-ability="trait-14" data-max="5" data-value="0">
+                    </div>
+                </div>
+            </div>
+            
+        <div class="middle-column">
+            <div class="humanity-path">
+                <h3>Humanity/Path</h3>
+                <input type="text" id="path-name" name="path-name" placeholder="Path Name">
+                <div class="dots" data-ability="humanity" data-max="10" data-value="0"></div>
+            </div>
+            
+            <div class="willpower">
+                <h3>Willpower</h3>
+                <div class="willpower-row"></div>
+                    <span class="willpower-label">Total:</span>
+                    <div class="willpower-total dots" data-ability="willpower-total" data-max="10" data-value="0"></div>
+                <div class="willpower-row"></div>
+                    <span class="willpower-label">Current:</span>
+                    <div class="willpower-current dots" data-ability="willpower-current" data-max="10" data-value="0"></div>
+            </div>
+            
+            <div class="bloodpool">
+                <h3>Bloodpool</h3>
+                <div class="bloodpool-boxes dots" data-ability="bloodpool" data-max="20" data-value="0"></div>
+                <div class="points-per-turn">
+                    <label for="bloodpool-points-per-turn">Points Per Turn:</label>
+                    <input type="number" id="bloodpool-points-per-turn" name="bloodpool-points-per-turn" min="1" max="10">
+                </div>
+                <div class="import-export-buttons">
+                    <button id="export-character">Export Character</button>
+                    <button id="import-character">Import Character</button>
+                </div>
+            </div>
+        </div>
+            
+        <div class="right-column">
+            <div class="health-section">
+                <h3>Health</h3>
+                <div class="health-row">
+                    <span class="health-label">Bruised</span>
+                    <div class="dots" data-ability="health-bruised" data-max="1" data-value="0"></div>
+                </div>
+                <div class="health-row">
+                    <span class="health-label">Hurt -1</span>
+                    <div class="dots" data-ability="health-hurt" data-max="1" data-value="0"></div>
+                </div>
+                <div class="health-row">
+                    <span class="health-label">Injured -1</span>
+                    <div class="dots" data-ability="health-injured" data-max="1" data-value="0"></div>
+                </div>
+                <div class="health-row">
+                    <span class="health-label">Wounded -2</span>
+                    <div class="dots" data-ability="health-wounded" data-max="1" data-value="0"></div>
+                </div>
+                <div class="health-row">
+                    <span class="health-label">Mauled -2</span>
+                    <div class="dots" data-ability="health-mauled" data-max="1" data-value="0"></div>
+                </div>
+                <div class="health-row">
+                    <span class="health-label">Crippled -5</span>
+                    <div class="dots" data-ability="health-crippled" data-max="1" data-value="0"></div>
+                </div>
+                <div class="health-row">
+                    <span class="health-label">Incapacitated</span>
+                    <div class="dots" data-ability="health-incapacitated" data-max="1" data-value="0"></div>
+                </div>
+            </div>
+            <div class="weakness-section">
+                <h3>Weakness</h3>
+                <input type="text" id="weakness" name="weakness">
+            </div>
+            <div class="experience-section">
+                <h3>Experience</h3>
+                <input type="text" id="experience" name="experience">
+            </div>
+        </div>
+    </div>
+    <script src="character-sheet.js"></script>
+    <script src="import-character.js"></script>
+    <script src="export-character.js"></script>
+</body>
+</html>
